@@ -4,6 +4,11 @@ Entry word: "Ghosting" -- home Wi-Fi that vanishes mid-call, mid-show,
 mid-sentence, exactly when you need it most, then drifts back like
 nothing happened. It describes the connection as the entrant lives it:
 present one moment, gone the next, no explanation offered.
+
+Why this word wins its pairings: every household knows the moment the
+bars disappear for no reason. "Ghosting" names that exact behaviour in
+one everyday word -- no setup, no pun to decode, no jargon. The joke
+lands because the experience is universal: the network ghosts you.
 """
 
 import os
@@ -26,6 +31,8 @@ def validate(word):
         raise ValueError("entry word must be 1 to 20 characters")
     if any(ch.isspace() for ch in word):
         raise ValueError("entry must be a single word")
+    if not word.isalpha():
+        raise ValueError("entry word must be letters only")
     return word
 
 
